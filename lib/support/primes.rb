@@ -1,4 +1,14 @@
 class Primes
+
+  def self.generate(how_many)
+    primes = [2,3,5]
+    num_primes = 3
+    while( num_primes <= how_many)
+      num_primes += 1
+    end
+
+  end
+
   def self.p_1000
     %w(    2      3      5      7     11     13     17     19     23     29
      31     37     41     43     47     53     59     61     67     71
