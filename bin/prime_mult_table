@@ -1,0 +1,7 @@
+#!/usr/bin/env ruby
+
+require 'prime_multiplication_table'
+
+how_many = ARGV[0] || 10
+table = PrimeMultiplicationTable::Prime.create_multiplication_table how_many.to_i
+puts table
