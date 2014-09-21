@@ -21,6 +21,11 @@ RSpec.describe PrimeMultiplicationTable do
     it 'returns the correct number of primes' do
       expect(PrimeMultiplicationTable::Prime.build_primes(10)).to match(ten_primes)
     end
+
+    it 'returns 1000 prime numbers' do
+      puts $primes_1000
+    end
+
   end
 
   context "#primes" do
@@ -28,5 +33,6 @@ RSpec.describe PrimeMultiplicationTable do
     it 'returns the correct number of primes plus 1 added to the front' do
       expect(PrimeMultiplicationTable::Prime.primes(10)).to match([1] + ten_primes)
     end
+
   end
 end

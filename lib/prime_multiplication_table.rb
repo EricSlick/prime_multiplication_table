@@ -1,4 +1,5 @@
 require "prime_multiplication_table/version"
+require "support/primes"
 
 module PrimeMultiplicationTable
   class Prime
@@ -33,7 +34,8 @@ module PrimeMultiplicationTable
     end
 
     def self.build_primes(how_many)
-      [2, 3, 5, 7, 11, 13, 17, 19, 23, 29].slice(0, how_many)
+      # [2, 3, 5, 7, 11, 13, 17, 19, 23, 29].slice(0, how_many)
+      Primes.p_1000.map(&:to_i).slice(0, how_many)
     end
   end
 end

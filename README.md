@@ -1,5 +1,7 @@
 # PrimeMultiplicationTable
 
+This is the code I wrote for a coding test. I specify the test requirments and then write out the steps as if I was in the room with the reviewers talking through how I approached the problem. In this case, I wrote this code over the weekend as I had time. The time it took I added into the notes below. Times are approximate.
+
 Objective
 
 Write a program that prints out a multiplication table of the first 10 prime numbers.
@@ -41,20 +43,25 @@ Usually, a candidate talks through this process. I'm taking the time to write ou
 
   TIME: Spent about 45 minutes (high estimate, nearly all on researching prime number algorithms)
 
-2. Break out the requirements into a Story Map (maybe a bit overkill, but helpful in understanding how the user interacts and understanding what's being built before starting to write tests
+2. Story Map (Understanding Requirements and Identifying Acceptance Criteria and Correct Behavior (partially fills BDD but outside code))
+
+Break out the requirements into a Story Map (maybe a bit overkill, but helpful in understanding how the user is expected to interact with the feature and what he will get in return.  This goes a long way toward creating a common understanding between the coder and the product owner so there is less chance for misunderstanding
 
 goal: a formatted multiplication table of N number of prime numbers (note: exactly how this will look is left to the programmer's imagination)
-user: reviewer
-Step 1: Install the program
+user: reviewer/s who gave me this test
+Step 1: User Prepares to run the test
           a. Get the code from github
           b. cd into the root folder
-          c. bundle install (to make demoing it easier)
+          c. bundle install ()
+          d. rake install
 Step 2: Interface is the Command Line (ie, the Terminal or Console)
         User Input
-          a. From Terminal/Console Type 'prime_mult <value>'  (value is optional -- default is 10)
+          a. From Terminal/Console Type './bin/prime_mult_table <value>'  (value is optional -- default is 10)
         User Output
-          a. a formatted multiplications table is printed to STDOUT (to the console/terminal) for the user to see and do what they want with it.
-            1. though the look of the table is not directly specified, it's presumed that user comfort is expected. This should not result in a hard to read table. Formatting should be aligned and ways to help the eye find the right prime and the right multiple
+          a. a formatted multiplications table is printed to STDOUT (to the console/terminal)
+            1. though the look of the table is not directly specified, it's presumed that user comfort is expected. This should not result in a hard to read table. Formatting should be aligned and use ways to help the eye find the right prime and the right multiple
+        User Running Tests
+          a. type rspec
 
 3. Now that I understand the problem domain and have a reasonable understanding of how the user will interact with it and what output they expect to see, it's time to consider the technical design.  By this time, ideas an possibilities are swirling in my mind, so it's probably an easy thing to block out the technical design
   A. bin holds script that runs the program (note: expect this to be relatively easy, but will be doing research to ensure I'm going this the right way)
@@ -92,7 +99,7 @@ Step 2: Interface is the Command Line (ie, the Terminal or Console)
   2. user output alternatives
   3. programmatic usage of table  (ie, API and usefulness for other programs)
 
-Coding
+Coding (fleshing out the Framework and Refactoring)
 A. TDD (frame out some tests)
   1. create mult table exists in a class object
   2. outputs to stdout with a valid table (hard coded table)
@@ -104,11 +111,20 @@ B. TDD (refactor table building)
   2. tests passing
   3. time 1.5 hours
   4. notes: refactor led to additional changes, including abstracting out getting primes and when to build a new list.
-C. TDD (running from the console)
+C. TDD/BDD (running from the console)
   1. bin/script.rb test
   2. realized output wasn't as expected. Embedded carriage returns don't seem to be working
   3. Bug: '\n' does not interpolate but "\n" does
   4. Time 1 hour
+  5. rspec failing tests for stdout: use open3 to capture stdout
+  6. all tests passing
+  7. This directly tests the output that the user sees, so this is essentially a user view test and is suitable for confirming Behavior
+D TDD (refactor prime number selector)
+  1. change from hard coded list to use
+
+
+
+
 
 TODO: Write a gem description
 
