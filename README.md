@@ -155,4 +155,5 @@ C. Expanded Utility
   2. The gem was a convenience for this test, though it does make it a more flexible utility. Perhaps just a library would be appropriate, however.
   3. comma delimited output to a file for exporting to a spreadsheet.
 D. Tests
-  1.
+  1. does not test the table method instead of the generator method (PrimeMultiplicationTable::Prime::USE_TABLE)
+  2. The tests are sufficient, but more could be added to cover additional output table sizes and a larger set of primes

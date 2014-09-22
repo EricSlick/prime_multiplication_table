@@ -7,7 +7,7 @@ RSpec.describe 'prime_mult_table' do
    context 'when script is invoked' do
      it 'outputs to stdout a formatted table for 4 primes' do
        stdin, stdout, stderr = Open3.popen3('bin/prime_mult_table 4')
-       expect(stdout.readlines.join).to eq(expected_table_4)
+       expect(stdout.readlines.join).to include(expected_table_4)
      end
    end
 end
