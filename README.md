@@ -1,14 +1,14 @@
 # PrimeMultiplicationTable Coding Test
 
 ## How to Run The Tests and Run the prime multiplications table generator
-<code>
+```
   git clone git@github.com:EricSlick/prime_multiplication_table.git
   cd prime_multiplication_table
   bundle
   rake install
   rspec
   bin/prime_multiplication_table <value>  (value can be any positive integer, defaults to 10)
-</code>
+```
 Tested against Ruby 2.1.2, but there should be no dependencies preventing using another Ruby version.
 
 ## The Test
@@ -24,10 +24,10 @@ The first row and column of the table should have the 10 primes, with each cell 
 
 Notes
 
-• Consider complexity. How fast does your code run? How does it scale?
-• Consider cases where we want N primes.
-• Do not use the Prime class from stdlib (write your own code).
-• Write tests. Try to demonstrate TDD/BDD.
+* Consider complexity. How fast does your code run? How does it scale?
+* Consider cases where we want N primes.
+* Do not use the Prime class from stdlib (write your own code).
+* Write tests. Try to demonstrate TDD/BDD.
 
 
 ## Thought Process and Coding Process
