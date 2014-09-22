@@ -9,7 +9,7 @@
   rspec
   bin/prime_multiplication_table <value>  (value can be any positive integer, defaults to 10)
 ```
-Tested against Ruby 2.1.2, but there should be no dependencies preventing using another Ruby version.
+Notes: Used latest versions of ruby and related gems
 
 ## The Test
 This is the code I wrote for a coding test. I specify the test requirements and then write out the steps as if I was in the room with the reviewers talking through how I approached the problem. In this case, I wrote this code over the weekend as I had time. The time it took I added into the notes below. Times are approximate.
@@ -154,3 +154,5 @@ C. Expanded Utility
   1. The api allows usefulness from other programs through the gem, but a more formal approach may be worth considering
   2. The gem was a convenience for this test, though it does make it a more flexible utility. Perhaps just a library would be appropriate, however.
   3. comma delimited output to a file for exporting to a spreadsheet.
+D. Tests
+  1.
