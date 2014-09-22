@@ -1,8 +1,16 @@
-# PrimeMultiplicationTable
+# PrimeMultiplicationTable Coding Test
 
-This is the code I wrote for a coding test. I specify the test requirments and then write out the steps as if I was in the room with the reviewers talking through how I approached the problem. In this case, I wrote this code over the weekend as I had time. The time it took I added into the notes below. Times are approximate.
+## How to Run The Tests and Run the prime multiplications table generator
+1. get the code from github
+<code>
+  git clone git@github.com/EricSlick:prime_multiplication_table
+</code>
 
-Objective
+
+## The Test and My Notes/Thoughts on the Process
+This is the code I wrote for a coding test. I specify the test requirements and then write out the steps as if I was in the room with the reviewers talking through how I approached the problem. In this case, I wrote this code over the weekend as I had time. The time it took I added into the notes below. Times are approximate.
+
+### Objective
 
 Write a program that prints out a multiplication table of the first 10 prime numbers.
 
@@ -120,7 +128,29 @@ C. TDD/BDD (running from the console)
   6. all tests passing
   7. This directly tests the output that the user sees, so this is essentially a user view test and is suitable for confirming Behavior
 D TDD (refactor prime number selector)
-  1. change from hard coded list to use
+  1. change from hard coded list to use generated primes (N primes)
+  3. spent a good amount of time exploring the theory and algorithms for finding primes and tried my hand at figuring out something new (why not ;)
+  4. finally chose to implement an algorithm found here (under jyothu http://stackoverflow.com/questions/11673968/how-do-i-generate-the-first-n-prime-numbers) with one slight modification (stop checking divisors if it's over half way to the number being checked)
+  5. test covers up to 1000 primes
+  6. Time 3 hours (most of that was playing around with trying to figure out an approach on my own)
+
+I chose to stop here because I had no more time.
+
+Things I considered would be good ideas to pursue
+A. Optimization Thoughts (speed)
+  1. Definitely a better algorithm for generating primes
+  2. As primes are generated, store the results instead of re-creating them (ie, build a table and only generate more primes as needed)
+  3. Start with a "primed" prime table up to some reasonable limit and use that with the prime generator as backup
+  4. The Prime.p_1000 table is a string array but would be better as an integer array (since it was really only for tests in the end, didn't change it out of convenience)
+B. Output
+  1. Tables grow larger than the width of the screen pretty quickly, so storing in a file would be useful
+  2. Print out the results in sections, so that the table displays only as much as fits on the screen and the rest it displays on a new line
+  3. highlighting or coloring rows to help the eye navigate the rows to find the desired product
+C. Expanded Utility
+  1. The api allows usefulness from other programs through the gem, but a more formal approach may be worth considering
+  2. The gem was a convenience for this test, though it does make it a more flexible utility. Perhaps just a library would be appropriate, however.
+  3. comma delimited output to a file for exporting to a spreadsheet.
+
 
 
 

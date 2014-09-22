@@ -4,7 +4,7 @@ require "support/primes"
 module PrimeMultiplicationTable
   class Prime
 
-    USE_TABLE = true
+    USE_TABLE = false
 
     def self.create_multiplication_table(how_many = 10)
       mult_table = ""
