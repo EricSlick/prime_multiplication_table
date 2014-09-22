@@ -1,13 +1,17 @@
 # PrimeMultiplicationTable Coding Test
 
 ## How to Run The Tests and Run the prime multiplications table generator
-1. get the code from github
 <code>
-  git clone git@github.com/EricSlick:prime_multiplication_table
+  git clone git@github.com:EricSlick/prime_multiplication_table.git
+  cd prime_multiplication_table
+  bundle
+  rake install
+  rspec
+  bin/prime_multiplication_table <value>  (value can be any positive integer, defaults to 10)
 </code>
+Tested against Ruby 2.1.2, but there should be no dependencies preventing using another Ruby version.
 
-
-## The Test and My Notes/Thoughts on the Process
+## The Test
 This is the code I wrote for a coding test. I specify the test requirements and then write out the steps as if I was in the room with the reviewers talking through how I approached the problem. In this case, I wrote this code over the weekend as I had time. The time it took I added into the notes below. Times are approximate.
 
 ### Objective
@@ -26,7 +30,7 @@ Notes
 • Write tests. Try to demonstrate TDD/BDD.
 
 
-Thought Process and Coding Process
+## Thought Process and Coding Process
 
 Usually, a candidate talks through this process. I'm taking the time to write out the process I went through in the order I took them. I indicate approximate times for each step since it was not one continuous effort.
 
@@ -150,36 +154,3 @@ C. Expanded Utility
   1. The api allows usefulness from other programs through the gem, but a more formal approach may be worth considering
   2. The gem was a convenience for this test, though it does make it a more flexible utility. Perhaps just a library would be appropriate, however.
   3. comma delimited output to a file for exporting to a spreadsheet.
-
-
-
-
-
-
-TODO: Write a gem description
-
-## Installation
-
-Add this line to your application's Gemfile:
-
-    gem 'prime_multiplication_table'
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install prime_multiplication_table
-
-## Usage
-
-TODO: Write usage instructions here
-
-## Contributing
-
-1. Fork it ( https://github.com/[my-github-username]/prime_multiplication_table/fork )
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Add some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create a new Pull Request
